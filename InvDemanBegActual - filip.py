@@ -19,11 +19,9 @@ def getLastMonth():
     
     return lastMonth
 
-inventoryTemplateFileDest = r"MonthlyInventory\InventoryTemplate.xlsx"
-oldExcelFileDest = r"MonthlyInventory\Inventory" + str(getLastMonth()) + ".xlsx"
-newExcelFileDest = r"MonthlyInventory\Inventory" + str(getCurrentMonth()) + ".xlsx"
-
-print(oldExcelFileDest)
+inventoryTemplateFileDest = r"C:\Users\jokal\Documents\GitHub\MonthlyInventory\InventoryTemplate.xlsx"
+oldExcelFileDest = r"C:\Users\jokal\Documents\GitHub\MonthlyInventory\Inventory" + str(getLastMonth()) + ".xlsx"
+newExcelFileDest = r"C:\Users\jokal\Documents\GitHub\MonthlyInventory\Inventory" + str(getCurrentMonth()) + ".xlsx"
 
 def moveValues(template, oldFile, newFile):
     """This function copies the needed values from the old file
@@ -51,7 +49,8 @@ def moveValues(template, oldFile, newFile):
         i += 1
 
     newWorkBook.save(newFile)
-    
+
+# print(oldExcelFileDest)
 moveValues(inventoryTemplateFileDest, oldExcelFileDest, newExcelFileDest)
 
 
